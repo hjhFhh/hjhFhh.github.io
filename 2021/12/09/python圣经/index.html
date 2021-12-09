@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <title>python圣经 - Hexo</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Python 笔记[TOC] 12345678910TempStr &#x3D; input(&quot;请输入带有符号的温度值：&quot;)if TempStr [-1] in [&quot;F&quot; , &quot;f&quot;]:    C &#x3D; (eval(TempStr[0:-1])-32)&#x2F;1.8    print(&quot;转换后的温度是&amp;#123;:.2f&amp;#125;C&quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python圣经">
+<meta property="og:url" content="http://example.com/2021/12/09/python%E5%9C%A3%E7%BB%8F/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Python 笔记[TOC] 12345678910TempStr &#x3D; input(&quot;请输入带有符号的温度值：&quot;)if TempStr [-1] in [&quot;F&quot; , &quot;f&quot;]:    C &#x3D; (eval(TempStr[0:-1])-32)&#x2F;1.8    print(&quot;转换后的温度是&amp;#123;:.2f&amp;#125;C&quot;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211005171346694.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211005171724303.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211005172105579.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211005173451915.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211005173510434.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211006170217929.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211008175221050.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211008180053407.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211008180947350.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211008181157586.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211008181330340.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211008182114571.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211008183112566.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017114138583.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017183439959.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017184847132.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017192113958.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017192221968.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017192622885.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017193327565.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017194129617.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017194531800.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017202029277.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017201208767.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017201251689.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017202439886.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017202602873.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211017202827974.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211107162953814.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211107163347866.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211114135129897.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211122101120011.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211128173119176.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211128173058048.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211128173231459.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211128173757595.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211128181507246.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211129100359173.png">
+<meta property="og:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211129100603792.png">
+<meta property="article:published_time" content="2021-12-09T08:25:09.000Z">
+<meta property="article:modified_time" content="2021-12-09T08:26:06.060Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/Administrator~/AppData/Roaming/Typora/typora-user-images/image-20211005171346694.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=1639038973203">
+     
+    
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1639038973203">
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="John Doe" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="John Doe"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="John Doe">
+            <img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="John Doe" alt="John Doe">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>2</div>
+        <div><span>Tags</span>1</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://jq.qq.com/?_wv=1027&k=5CfKHun" target="_blank" mdui-tooltip="{content: 'QQ群'}" style="color: rgb(249, 174, 8);background-color: rgba(249, 174, 8, .1);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+    
+    
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/Python/" style="font-size: 10px;">Python</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2021 John Doe
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a><script data-ad-client="ca-pub-2058306854838448" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
+              <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="python圣经" class="lazyload">
+              <h1>python圣经</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2021年12月09日</a>
+    <a><i class="nexmoefont icon-areachart"></i>8.9k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 41 分钟</a>
+</div>
+
+      
+
+      <h1 id="Python-笔记"><a href="#Python-笔记" class="headerlink" title="Python 笔记"></a>Python 笔记</h1><p>[TOC]</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">TempStr = <span class="built_in">input</span>(<span class="string">&quot;请输入带有符号的温度值：&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> TempStr [-<span class="number">1</span>] <span class="keyword">in</span> [<span class="string">&quot;F&quot;</span> , <span class="string">&quot;f&quot;</span>]:</span><br><span class="line">    C = (<span class="built_in">eval</span>(TempStr[<span class="number">0</span>:-<span class="number">1</span>])-<span class="number">32</span>)/<span class="number">1.8</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;转换后的温度是&#123;:.2f&#125;C&quot;</span>.<span class="built_in">format</span>(C))</span><br><span class="line"><span class="keyword">elif</span> TempStr[-<span class="number">1</span>] <span class="keyword">in</span> [<span class="string">&quot;C&quot;</span>,<span class="string">&quot;c&quot;</span>]:</span><br><span class="line">    F = <span class="number">1.8</span>*<span class="built_in">eval</span>(TempStr[<span class="number">0</span>:-<span class="number">1</span>])+<span class="number">32</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;转换后的温度是&#123;:.2f&#125;F&quot;</span>.<span class="built_in">format</span>(F))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;输入格式错误&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p>字符串[M]    如 TempStr [-1] ，意为：返回TempStr变量所赋值的最后一个值</p>
+<h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><p>字符串[M:N]    如 TempStr[0:-1]，意为：返回该变量所赋值的第一个到最后一个之间的所有内容，但不取最后一个（即-1那一位）</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>列表使用[ ]表示，中间用 (,) 分隔各个元素</p>
+<p>如：[“F” ,”f”]表示其中含有两个元素：F 和 f</p>
+<p>其中可以使用保留字：in 来判断一个元素是否再列表中</p>
+<p>如：TempStr(-1) in [‘C’ , ‘c’] 即用于判断该变量赋值的最后一个字符是否处于列表中，如果存在，那么将返回一个True 真值， 否则将返回一个false 假值</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>整形</p>
+<p>对应数学中的整数，包括正整数和负整数</p>
+<p>浮点型</p>
+<p>对应数学中的实数</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="输入函数input"><a href="#输入函数input" class="headerlink" title="输入函数input()"></a>输入函数input()</h3><p>用于从控制台获得用户输入的函数</p>
+<p>-input()函数的使用格式：</p>
+<p>&lt;变量&gt; = input(&lt;提示信息字符串&gt;)</p>
+<p>-用户输入的信息将以字符串类型保存在&lt;变量&gt;中</p>
+<p>如：TempStr = input(‘请输入’) #TempStr 保存用户输入的信息</p>
+<h3 id="输出函数-print"><a href="#输出函数-print" class="headerlink" title="-输出函数 print()"></a>-输出函数 print()</h3><p>以字符形式像控制台输出结果的函数</p>
+<p>-print()函数的基本使用格式：</p>
+<p>print(&lt;拟输出字符串或字符串变量&gt;)</p>
+<p>-字符串类型的一对引号仅在程序内部使用，输出无引号</p>
+<p>如：print(“输入格式错误”) #向控制台输出 输入格式错误</p>
+<p>-使用  ,  将输出的各种信息分隔，会在每个字符串之间添加一个空格</p>
+<h3 id="import-保留字"><a href="#import-保留字" class="headerlink" title="-import 保留字"></a>-import 保留字</h3><p>引入了一个绘图库，名字叫做：turtle</p>
+<h4 id="turtle-库的使用"><a href="#turtle-库的使用" class="headerlink" title="-turtle 库的使用"></a>-turtle 库的使用</h4><h5 id="Python计算生态-标准库-第三方库"><a href="#Python计算生态-标准库-第三方库" class="headerlink" title="Python计算生态 = 标准库 + 第三方库"></a>Python计算生态 = 标准库 + 第三方库</h5><ul>
+<li><p>标准库：随解释器直接安装到操作系统中的功能模块</p>
+</li>
+<li><p>第三方库：需要经过安装才能使用的功能模块</p>
+</li>
+<li><p>库Library、包Package、模块Module，统称模块</p>
+</li>
+</ul>
+<h5 id="turtle库基本介绍"><a href="#turtle库基本介绍" class="headerlink" title="-turtle库基本介绍"></a>-turtle库基本介绍</h5><ul>
+<li><p>l1969年诞生，主要用于程序设计入门</p>
+</li>
+<li><p>是python语言的标准库之一</p>
+</li>
+</ul>
+<h5 id="turtle绘图窗体布局"><a href="#turtle绘图窗体布局" class="headerlink" title="-turtle绘图窗体布局"></a>-turtle绘图窗体布局</h5><ul>
+<li>最小单位为像素</li>
+<li>turtle.setup(width,height,startx,starty)</li>
+<li>setup()设置窗体大小及位置</li>
+<li>4个参数中后两个可选</li>
+<li>setup()不是必须的</li>
+<li>如：turtle(800,400,0,0)——意为：生成的一个宽800，长400，以屏幕左上角为窗口左上角的画布</li>
+<li>如：turtle(800,400)——意为：生成一个宽800，长400的画布，由于没有指定出现的位置，则默认出现在屏幕中央</li>
+</ul>
+<h5 id="turtle空间坐标体系"><a href="#turtle空间坐标体系" class="headerlink" title="-turtle空间坐标体系"></a>-turtle空间坐标体系</h5><ul>
+<li>绝对坐标&amp;海龟坐标<ul>
+<li>绝对坐标<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211005171346694.png" alt="image-20211005171346694" class="lazyload"></li>
+<li>turtle.goto(x,y)  ——让任何位置的海龟到达指定地点</li>
+<li>海龟坐标<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211005171724303.png" alt="image-20211005171724303" class="lazyload"></li>
+<li>turtle.fd(d)_向前方运行，如：turtle.fd(150)向前前进150像素</li>
+<li>turtle.bk(d)_向后方运行</li>
+<li>turtle.circle(r,angle)_以海龟当前位置左侧的某一个为圆心进行曲线运行</li>
+</ul>
+</li>
+</ul>
+<h5 id="turtle角度坐标体系"><a href="#turtle角度坐标体系" class="headerlink" title="-turtle角度坐标体系"></a>-turtle角度坐标体系</h5><ul>
+<li><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211005172105579.png" alt="image-20211005172105579" class="lazyload"></li>
+<li>如：turtle.seth(45)_海龟向左转45°</li>
+<li>如：turtle.seth(-135)_海归向右转135°</li>
+<li>turtle.left(angle)、turtle.right(angle)_使海龟向左、右转</li>
+</ul>
+<h5 id="RGB色彩体系"><a href="#RGB色彩体系" class="headerlink" title="-RGB色彩体系"></a>-RGB色彩体系</h5><ul>
+<li>RGB 指红蓝绿三个通道的颜色组合</li>
+<li>覆盖实力所能感知的所有颜色</li>
+<li>RGB美色取值范围0-255整数或0-1小数</li>
+<li>常用RGB色彩<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211005173451915.png" alt="image-20211005173451915" class="lazyload"><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211005173510434.png" alt="image-20211005173510434" class="lazyload"></li>
+<li>turtle默认使用小数表示颜色，当然也可以切换为整数</li>
+<li>turtle.colormode(mode)<pre><code>- 1.0：RGB小数值模式
+- 255：RGB整数值模式
+- 如:turtle.colormode(1.0)、turtle.colomode(255)
+</code></pre>
+</li>
+</ul>
+<h3 id="turtle程序语法元素分析"><a href="#turtle程序语法元素分析" class="headerlink" title="turtle程序语法元素分析"></a>turtle程序语法元素分析</h3><h4 id="库引用与import"><a href="#库引用与import" class="headerlink" title="库引用与import"></a>库引用与import</h4><ul>
+<li><h6 id="库引用"><a href="#库引用" class="headerlink" title="库引用"></a>库引用</h6><p>扩充Python程序功能的方式</p>
+<ul>
+<li>使用import保留字完成，采用<a>.<b>()编码风格</li>
+<li>import&lt;库名&gt;</li>
+<li>&lt;库名&gt;&lt;函数名&gt;(&lt;函数参数&gt;)</li>
+</ul>
+</li>
+<li><h6 id="import更多用法"><a href="#import更多用法" class="headerlink" title="import更多用法"></a>import更多用法</h6><ul>
+<li><p>使用from和import保留字共同完成</p>
+</li>
+<li><p>from&lt;库名&gt;import&lt;函数名&gt;</p>
+</li>
+<li><p>from&lt;库名&gt;import *</p>
+<p>&lt;函数名&gt;(&lt;函数参数&gt;)</p>
+</li>
+</ul>
+</li>
+<li><p>```python<br>#绘制蟒蛇<br>import turtle<br>turtle.setup(650,350,200,200)<br>turtle.penup()<br>turtle.fd(-250)<br>turtle.pendown()<br>turtle.pensize(25)<br>turtle.pencolor(‘purple’)<br>turtle.seth(-40)<br>for i in range(4):</p>
+<pre><code>turtle.circle(40,80)
+turtle.circle(-40,80)
+</code></pre>
+<p>turtle.circle(40,80/2)<br>turtle.fd(40)<br>turtle.circle(16,180)<br>turtle.fd(40 * 2/3)<br>turtle.done()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">简化后：</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line">from turtle import *</span><br><span class="line">setup(650,350,200,200)</span><br><span class="line">penup()</span><br><span class="line">fd(-250)</span><br><span class="line">pendown()</span><br><span class="line">pensize(25)</span><br><span class="line">pencolor(&#x27;purple&#x27;)</span><br><span class="line">seth(-40)</span><br><span class="line">for i range(4):</span><br><span class="line">    circle(40,80)</span><br><span class="line">    circle(-40,80)</span><br><span class="line">circle(40,80/2)</span><br><span class="line">fd(40)</span><br><span class="line">circle(16,180)</span><br><span class="line">fd(40 * 2/3)</span><br><span class="line">done()</span><br></pre></td></tr></table></figure>
+
+<p>使用from&lt;库名&gt;import *时，下方的函数名可能会与用户自定义的同名函数或其它库的同名函数相冲突。而使用&lt;库名&gt;.&lt;函数名&gt;.(参数)的方式则可以避免这一问题</p>
+<ul>
+<li>使用import 和 as 保留字来为库命名别名</li>
+<li>import&lt;库名&gt;as&lt;库别名&gt;<br>&lt;库名&gt;.&lt;函数名&gt;(&lt;函数参数&gt;)<br>-给调用的外部库关联一个更短、更适合自己的名字</li>
+<li>如：import turtle as t<br>推荐使用ing…</li>
+</ul>
+</li>
+</ul>
+<h4 id="turtle画笔控制函数"><a href="#turtle画笔控制函数" class="headerlink" title="turtle画笔控制函数"></a>turtle画笔控制函数</h4><ul>
+<li>turtle.penup()    别名        turtle.pu()<br>抬起画笔，此时画笔经过的路径将没有图案</li>
+<li>turtle.pendown()    别名    turtle.pd()<br>落下画笔，此时画笔经过的路径将产生轨迹<br>turtle.penup() 与 turtle.pendown() 是成对出现的</li>
+<li>turtle.pensize(wideth)   别名    turtle.wideth(width)<br>设置画笔的宽度，一次设置以后将一直有效，知道下次重新设置</li>
+<li>turtle.pencolor(color)    color为颜色字符串或RGB值，turtle.pencolor(color)的color参数可以有三种形式<br>-颜色字符串:    turtle.pencolor(‘purple’)<br>-RGB的小数值：    turtle.pencolor(0.63,0.13,0.94)<br>-RGB的元组值：    turtle.pencolor((0.63,0.13,094))</li>
+</ul>
+<h4 id="turtle运动控制函数"><a href="#turtle运动控制函数" class="headerlink" title="turtle运动控制函数"></a>turtle运动控制函数</h4><ul>
+<li><p>控制海龟的行进：走直线&amp;走曲线</p>
+</li>
+<li><p>turtle.forword(d)    别名    turtle.fd(d)<br>向前行进   d：行进距离，可以为负数，像素</p>
+</li>
+<li><p>turtle.circle(r,extent=None)<br>根据半径 r 绘制extent角度的弧形</p>
+<p>-r：默认圆心在海龟左侧 r 距离的位置<br>-extent：绘制角度，默认是360°整圆——即：确定圆心以后绘制的圆的角度是多少</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211006170217929.png" alt="image-20211006170217929" class="lazyload"></p>
+</li>
+</ul>
+<h4 id="turtle方向控制函数"><a href="#turtle方向控制函数" class="headerlink" title="turtle方向控制函数"></a>turtle方向控制函数</h4><ul>
+<li>控制海龟面对方向：绝对角度&amp;海龟角度</li>
+<li>turtle.setheading(angle)    别名    turtle.seth<br>用于改变海龟方向<br>-angle：改变行进方向<br>此为：绝对角度转向方法</li>
+<li>turtle.left(angle)、turtle.right(angle)<br>此为：海龟角度转向方法</li>
+</ul>
+<h4 id="基本循环语句"><a href="#基本循环语句" class="headerlink" title="基本循环语句"></a>基本循环语句</h4><ul>
+<li><p>按一定次数循环执行一组语句</p>
+</li>
+<li><p>for &lt;变量&gt; in range(&lt;参数&gt;)<br>&lt;被循环执行的语句&gt;<br>&lt;变量&gt;表示每次循环的技术，0到&lt;次数&gt;-1<br>如：range(5)表示循环5次</p>
+</li>
+<li><p>range() 函数<br>产生循环计数序列</p>
+<p>range(&lt;起始值&gt;,&lt;结束值&gt;,&lt;步距&gt;)</p>
+</li>
+</ul>
+<h4 id="“Python蟒蛇绘制”代码分析"><a href="#“Python蟒蛇绘制”代码分析" class="headerlink" title="“Python蟒蛇绘制”代码分析"></a>“Python蟒蛇绘制”代码分析</h4><p>turtle.done()程序运行后不会自动退出，需要自动退出</p>
+<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><h3 id="数字类型及操作"><a href="#数字类型及操作" class="headerlink" title="数字类型及操作"></a>数字类型及操作</h3><ul>
+<li><p>整数类型<br>与数学中整数概念相同<br>可正可负，没有取值范围限制<br>-pow(x,y) 函数：计算x的y次方，想算多大算多大<br>-4种进制表示形式</p>
+<pre><code>-十进制
+-二进制，以0b 或 0B 开头
+-八进制，以 0o 或 0O 开头
+-十六进制，以0x 或 0X开头
+</code></pre>
+</li>
+<li><p>浮点数类型<br>与数学中实数的概念一致<br>-取值范围和精度基本无限制</p>
+<p>-带有小数点及小数的数字<br>-浮点数取值范围和小数精度都存在限制，但常规计算可忽略<br>-取值范围数量<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211008175221050.png" alt="image-20211008175221050" class="lazyload"><br>-<strong>浮点数间运算存在不确定位数，不是bug</strong><br>-round(x,d)  :对 x 四舍五入，d 是小数截取位数————如：0.1+0.2==0.3 将输入Flase，而round(0.1+0.2) ==0.3 将输入True<br>-<em>浮点数可以采用科学计数法表示</em></p>
+<p>​    -使用字母 e 或 E 作为幂的符号，以10为技术，格式如下：<a>e<b> 表示：<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211008180053407.png" alt="image-20211008180053407" class="lazyload"></p>
+<p>如：4.3e-3 值为：0.0043，9.6E5 值为960000.0</p>
+</li>
+<li><p>复数类型<br>-与数学中负数的概念一致<br>-z = 1.23e-4+5.6e+89j</p>
+<pre><code>z.real    获得实部
+z.imag   获得虚部
+</code></pre>
+</li>
+<li><p>数值运算操作符<br><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211008180947350.png" alt="image-20211008180947350" class="lazyload"><br>-<strong>在python中两个数相除产生的结果是浮点型</strong><br>-<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211008181157586.png" alt="image-20211008181157586" class="lazyload"><br>-<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211008181330340.png" alt="image-20211008181330340" class="lazyload"><br>-<em>类型间可进行混合运算，生成结果为“最宽”类型</em>  即：三种类型存在一种逐渐扩展或变宽的关系：整数 -&gt;浮点数 -&gt;复数</p>
+<pre><code>如：123+4.0 = 127.0 (整数+浮点数=浮点数)
+</code></pre>
+</li>
+<li><p>数值运算函数</p>
+<p>-<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211008182114571.png" alt="image-20211008182114571" class="lazyload"><br>-<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211008183112566.png" alt="image-20211008183112566" class="lazyload"></p>
+</li>
+</ul>
+<h3 id="实例3：天天向上的力量"><a href="#实例3：天天向上的力量" class="headerlink" title="实例3：天天向上的力量"></a>实例3：天天向上的力量</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dayUP</span>(<span class="params">df</span>):</span></span><br><span class="line">    dayup = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">365</span>):</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">7</span> <span class="keyword">in</span> [<span class="number">6</span>,<span class="number">0</span>]:</span><br><span class="line">            dayup = dayup * (<span class="number">1</span>-<span class="number">0.01</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            dayup = dayup * (<span class="number">1</span> + df)</span><br><span class="line">    <span class="keyword">return</span> dayup</span><br><span class="line">dayfactor = <span class="number">0.01</span></span><br><span class="line"><span class="keyword">while</span> dayUP(dayfactor) &lt; <span class="number">37.78</span>:</span><br><span class="line">    dayfactor += <span class="number">0.001</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;工作日的努力参数为：&#123;:.3f&#125;&quot;</span>.<span class="built_in">format</span>(dayfactor))</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="字符串类型及操作"><a href="#字符串类型及操作" class="headerlink" title="字符串类型及操作"></a>字符串类型及操作</h3><p>字符串有 2类共4钟 表示方法<br>一对单引号或双引号，仅表示单行字符串<br>一对三单引号或三双引号表示，可表示多行字符串</p>
+<p>python语言中并没有提供多行注释，在代码中出现了一个字符串但并没有将其赋值给任何变量，解释器并不会对其进行解释</p>
+<h6 id="索引-1"><a href="#索引-1" class="headerlink" title="索引"></a>索引</h6><p>​    如：TempStr[4]</p>
+<h6 id="切片-1"><a href="#切片-1" class="headerlink" title="切片"></a>切片</h6><p>使用[M:N:K]根据步长对字符串切片</p>
+<ul>
+<li>&lt;字符串&gt;[M:N]，M确实表示从开头开始，N确实表示到结尾</li>
+<li>&lt;字符串&gt;[M:N:K]，根据步长K对字符串进行切片</li>
+<li>&lt;字符串&gt;[::-1]，可以将字符串从后向前依次取出，相当于让字符串逆序</li>
+</ul>
+<h6 id="转义符"><a href="#转义符" class="headerlink" title="转义符  \"></a>转义符  \</h6><ul>
+<li><p>转义符表达特定字符的本意<br>如：在使用双引号引起来的字符串中仍然希望使用双引号————可以使用转义符达到：”这里有个双引号(&quot;)”——输出的结果为：这里有个双引号(“)</p>
+</li>
+<li><p>转义符形成一些组合，表达一些不可打印的含义<br>如：<br>\b 回退</p>
+<p>\n 换行（光标移到下行首）</p>
+<p>\r 回车（刚表移动到本行首）</p>
+</li>
+</ul>
+<h6 id="字符串操作符"><a href="#字符串操作符" class="headerlink" title="字符串操作符"></a>字符串操作符</h6><p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017114138583.png" alt="image-20211017114138583" class="lazyload"></p>
+<h6 id="字符串处理函数"><a href="#字符串处理函数" class="headerlink" title="字符串处理函数"></a>字符串处理函数</h6><ul>
+<li>len(x)——返回字符串x的长度</li>
+<li>str(x)——将任意类型转换为字符串——eval(x)一对对应函数</li>
+<li>hex(x)或oct(x)——整数x的十六进制或八进制小写形式字符串<br>如：hex(425)结果为：”0x1a9”</li>
+<li>chr(x)&amp;ord(x)——<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017183439959.png" alt="image-20211017183439959" class="lazyload"></li>
+</ul>
+<h6 id="字符串处理方法"><a href="#字符串处理方法" class="headerlink" title="字符串处理方法"></a><em>字符串处理方法</em></h6><p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017184847132.png" alt="image-20211017184847132" class="lazyload"></p>
+<ul>
+<li><p>str.lower()&amp;str.upper<br>返回字符串的副本，去处字符小写/大写<br>“AbCdEfGh”.lower()结果为”abcdefgh”</p>
+</li>
+<li><p>str.split(sep=None)<br>返回一个列表，由str根据sep被分隔的部分组成<br>“A,B,C”.split(“,”)结果为：[‘A’,’B’,’C’]</p>
+</li>
+<li><p>str.count(sub)<br>返回sub在str中出现的次数<br>‘an apple a day’.count(‘a’)结果为4</p>
+</li>
+<li><p>str.replace(old,new)<br>返回字符串str副本，所有的old子串被替换为new<br>‘python’.replace(‘n’,’n123.&#39;io’)结果为：’python123.io’</p>
+</li>
+<li><p>str.center(width[,fillchar])<br>字符串str根据宽度width居中，fillchar可选<br>‘python’.center(20,’=’)结果为’=======python=======’</p>
+</li>
+<li><p>str.strip(chars)</p>
+<p>从str中去掉在其左侧和右侧的chars中列出的字符<br>‘=python=’.strip(‘=np’)结果为’ytho’</p>
+</li>
+<li><p>str.join(iter)<br>在iter变量除最后元素外每个元素后增加一个str<br>‘，’.join(‘12345’)结果为’1，2，3，4，5’ #主要用于字符串分隔</p>
+</li>
+</ul>
+<h6 id="字符串类型的格式化"><a href="#字符串类型的格式化" class="headerlink" title="字符串类型的格式化"></a>字符串类型的格式化</h6><ul>
+<li><p>格式化是对字符串进行格式表达的方式</p>
+<ul>
+<li><p>字符串格式化使用.format()方法<br>&lt;模板字符串&gt;.format(&lt;逗号分隔的参数&gt;)</p>
+</li>
+<li><p><strong>槽</strong></p>
+<ul>
+<li><p>“{}:计算机{}的CPU占用率为{}%”.format(“2018-10-10”,”C”,10)<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017192113958.png" alt="image-20211017192113958" class="lazyload"><br>默认顺序是一致的，但可以指定需要添加参数的位置<br><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017192221968.png" alt="image-20211017192221968" class="lazyload"></p>
+</li>
+<li><p>槽内部对格式化的配置方式<br>{&lt;参数序号&gt;:&lt;格式控制标记&gt;}<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017192622885.png" alt="image-20211017192622885" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017193327565.png" alt="image-20211017193327565" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017194129617.png" alt="image-20211017194129617" class="lazyload"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017194531800.png" alt="image-20211017194531800" class="lazyload"></p>
+<h3 id="模块2：time库的使用"><a href="#模块2：time库的使用" class="headerlink" title="模块2：time库的使用"></a>模块2：time库的使用</h3><ul>
+<li>time库是python中处理时间的标准库<ul>
+<li>计算机时间的表达</li>
+<li>提供获取系统时间并格式化输出功能</li>
+<li>提供系统级精确计时功能，用于程序性能分析</li>
+</ul>
+</li>
+<li>time库包括三类函数<br>-时间获取：time() ctime() gmtime()<br>-时间格式化： strftime() strptime()<br>-程序计时：  sleep(),perf_counter()</li>
+<li>time()<br>获取当前时间戳，即计算机内部时间值，获得浮点数<br>time.time()<br>表示从1970年1月1日开始，到现在的秒数</li>
+<li>ctime()<br>获取当前时间，并以易读方式表示，返回字符串<br>time.ctime()</li>
+<li>gmtime()<br>获取当前时间，表示为计算机可处理的时间格式<br>time.gmtime()<br>这种格式我们称为：struct_time格式</li>
+<li></li>
+<li></li>
+</ul>
+<h6 id="时间格式化"><a href="#时间格式化" class="headerlink" title="时间格式化"></a>时间格式化</h6><ul>
+<li><p>将时间以合理的方式展现出来</p>
+</li>
+<li><p>格式化：类似字符串格式化，需要有展示模板</p>
+</li>
+<li><p>展示模板由特定的格式化控制符组成</p>
+</li>
+<li><p>strftime()方法<br>strftime(tpl,ts)<br>tpl是格式化模板字符串，用来定义输出效果<br>ts是计算机内部时间类型变量<br>t = time.gmtime()<br>time.strftime(‘%Y-%m-%d %H:%M:%S’ , t)</p>
+</li>
+<li><p>time.strptime()<br>与strftime()为互补关系，将字符串转换为时间<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017202029277.png" alt="image-20211017202029277" class="lazyload"></p>
+</li>
+<li><p>格式化时间控制符<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017201208767.png" alt="image-20211017201208767" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017201251689.png" alt="image-20211017201251689" class="lazyload"></p>
+</li>
+<li><p>time库的应用</p>
+<p>-程序计时</p>
+<p>​    程序计时指测量起止动作所经历时间的过程</p>
+<p>​    测量时间：perf_counter()</p>
+<p>​    产生时间：sleep()</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017202439886.png" alt="image-20211017202439886" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017202602873.png" alt="image-20211017202602873" class="lazyload"></p>
+</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211017202827974.png" alt="image-20211017202827974" class="lazyload"></p>
+<h3 id="实例4：文本进度条"><a href="#实例4：文本进度条" class="headerlink" title="实例4：文本进度条"></a>实例4：文本进度条</h3><p>``</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time <span class="keyword">as</span> t</span><br><span class="line"><span class="function"><span class="keyword">def</span> 休眠一下():</span></span><br><span class="line">    t.sleep(<span class="number">0.8</span>)</span><br><span class="line">scal = <span class="number">10</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(scal+<span class="number">1</span>):</span><br><span class="line">    a = <span class="string">&#x27;*&#x27;</span> * i</span><br><span class="line">    b = <span class="string">&#x27;-&#x27;</span> * (scal-i)</span><br><span class="line">    c = (i/scal)*<span class="number">100</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;\r &#123;&#125;% ~&#123;&#125;-&gt;&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(c,a,b) ,end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">    休眠一下()</span><br></pre></td></tr></table></figure>
+
+<p>``</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time <span class="keyword">as</span> t</span><br><span class="line">scale = <span class="number">50</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;开始执行！&#x27;</span>.center(scale,<span class="string">&#x27;-&#x27;</span>))</span><br><span class="line">start = t.perf_counter()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(scale+<span class="number">1</span>):</span><br><span class="line">    a = <span class="string">&#x27;*&#x27;</span> * i</span><br><span class="line">    b = <span class="string">&#x27;-&#x27;</span> * (scale-i)</span><br><span class="line">    c = (i/scale)*<span class="number">100</span></span><br><span class="line">    dur = t.perf_counter() - start</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;\r &#123;:^3.0f&#125;% [&#123;&#125; -&gt; &#123;&#125;] &#123;:.2f&#125;s&#x27;</span>.<span class="built_in">format</span>(c,a,b,dur),end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">    t.sleep(<span class="number">0.5</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;\n&#x27;</span>+<span class="string">&#x27;执行结束！&#x27;</span>.center(scale,<span class="string">&#x27;-&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h2 id="程序的控制结构"><a href="#程序的控制结构" class="headerlink" title="程序的控制结构"></a>程序的控制结构</h2><h3 id="程序的分支结构"><a href="#程序的分支结构" class="headerlink" title="程序的分支结构"></a>程序的分支结构</h3><h6 id="单分支结构"><a href="#单分支结构" class="headerlink" title="单分支结构"></a>单分支结构</h6><ul>
+<li>根据判断条件结果而选择不同向前路径的运行方式</li>
+<li>if …</li>
+</ul>
+<h6 id="二分支结构"><a href="#二分支结构" class="headerlink" title="二分支结构"></a>二分支结构</h6><ul>
+<li><p>if …else…</p>
+</li>
+<li><p>紧凑形式：适用于简单表达式的二分支结构，不可以在这当中使用等号赋值<br>&lt;表达式&gt; if &lt;条件&gt; else &lt;表达式2&gt;</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">guess = <span class="built_in">eval</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;猜&#123;&#125;了！&#x27;</span>.<span class="built_in">format</span>(<span class="string">&#x27;对&#x27;</span><span class="keyword">if</span> guess = <span class="number">99</span> <span class="keyword">else</span> <span class="string">&#x27;错&#x27;</span>))</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h6 id="多分支结构"><a href="#多分支结构" class="headerlink" title="多分支结构"></a>多分支结构</h6><ul>
+<li><p>if … elif…else…</p>
+</li>
+<li><p>多分支问题中，应当注意多条件之间的包含关系，注意变量取值范围的覆盖</p>
+</li>
+<li><p>‘</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">grade = <span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">&#x27;please input your grade&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> grade &gt;= <span class="number">90</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;您的成绩等级为：&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="string">&#x27;A&#x27;</span>))</span><br><span class="line"><span class="keyword">elif</span> grade &gt;= <span class="number">80</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;您的成绩等级为：&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="string">&#x27;B&#x27;</span>))</span><br><span class="line"><span class="keyword">elif</span> grade &gt;= <span class="number">70</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;您的成绩等级为：&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="string">&#x27;C&#x27;</span>))</span><br><span class="line"><span class="keyword">elif</span> grade &gt;= <span class="number">60</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;您的成绩等级为：&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="string">&#x27;D&#x27;</span>))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;您的成绩太差了~&#x27;</span>)<span class="string">&#x27;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h6 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h6><ul>
+<li><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211107162953814.png" alt="image-20211107162953814" class="lazyload"></li>
+<li>如果程序运行的过程中出错，就执行语句块2，没有出现异常就执行语句块1及其之后的代码，也可以加入一个异常类型标记，只有当出现异常类型标记的错误时才执行语句块2<br>标注异常类型后，就只能响应这一个异常类型</li>
+<li><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211107163347866.png" alt="image-20211107163347866" class="lazyload"></li>
+<li></li>
+</ul>
+<h3 id="实例5：身体质量指数BMI"><a href="#实例5：身体质量指数BMI" class="headerlink" title="实例5：身体质量指数BMI"></a>实例5：身体质量指数BMI</h3><p>‘’</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 计算BMI指数</span></span><br><span class="line">heigh = <span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入您的身高（米）&#x27;</span>))</span><br><span class="line">weight = <span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入您的体重（千克）&#x27;</span>))</span><br><span class="line">BMI = weight / <span class="built_in">pow</span>(heigh, <span class="number">2</span>)</span><br><span class="line">a, b = <span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">if</span> BMI &lt; <span class="number">18.5</span>:</span><br><span class="line">    a, b = <span class="string">&#x27;偏瘦&#x27;</span>, <span class="string">&#x27;偏瘦&#x27;</span></span><br><span class="line"><span class="keyword">elif</span> BMI &gt; <span class="number">18.5</span> <span class="keyword">and</span> BMI &lt; <span class="number">24</span>:</span><br><span class="line">    a, b = <span class="string">&#x27;正常&#x27;</span>, <span class="string">&#x27;正常&#x27;</span></span><br><span class="line"><span class="keyword">elif</span> BMI &gt; <span class="number">24</span> <span class="keyword">and</span> BMI &lt; <span class="number">25</span>:</span><br><span class="line">    a, b = <span class="string">&#x27;正常&#x27;</span>, <span class="string">&#x27;偏胖&#x27;</span></span><br><span class="line"><span class="keyword">elif</span> BMI &gt; <span class="number">25</span> <span class="keyword">and</span> BMI &lt; <span class="number">28</span>:</span><br><span class="line">    a, b = <span class="string">&#x27;偏胖&#x27;</span>, <span class="string">&#x27;偏胖&#x27;</span></span><br><span class="line"><span class="keyword">elif</span> BMI &gt; <span class="number">28</span> <span class="keyword">and</span> BMI &lt; <span class="number">30</span>:</span><br><span class="line">    a, b = <span class="string">&#x27;偏胖&#x27;</span>, <span class="string">&#x27;肥胖&#x27;</span></span><br><span class="line"><span class="keyword">elif</span> BMI &gt; <span class="number">30</span>:</span><br><span class="line">    a, b = <span class="string">&#x27;肥胖&#x27;</span>, <span class="string">&#x27;肥胖&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;您的BMI指数为：&#123;:~^10.2f&#125; \n 按照国际指标您的类型为：&#123;:~^10&#125; \n 按照国内指标您的类型为：&#123;:~^10&#125;&#x27;</span>.<span class="built_in">format</span>(BMI, a, b))</span><br></pre></td></tr></table></figure>
+
+<p>关注多分支条件的组合</p>
+<ul>
+<li>多分支条件之间的覆盖是重要问题</li>
+<li>程序可运行，但不正确，要注意多分支</li>
+<li><strong>分支结构是程序的重要框架，读程序先看分支</strong></li>
+</ul>
+<h3 id="程序的循环结构"><a href="#程序的循环结构" class="headerlink" title="程序的循环结构"></a>程序的循环结构</h3><h6 id="遍历循环"><a href="#遍历循环" class="headerlink" title="遍历循环"></a>遍历循环</h6><ul>
+<li><p>遍历某个结构形成的循环运行方式</p>
+</li>
+<li><p>```python<br>for &lt;循环变量&gt; in &lt;遍历结构&gt;：    &lt;语句块&gt;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  从遍历结构中逐一提取元素，放在循环变量中</span><br><span class="line"></span><br><span class="line">- 计数循环</span><br><span class="line"></span><br><span class="line">  ```python</span><br><span class="line">  for i in range(M,N,K):	print(i)</span><br></pre></td></tr></table></figure></li>
+<li><p>字符串遍历</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="built_in">input</span>() <span class="keyword">for</span> c <span class="keyword">in</span> s:	<span class="built_in">print</span>(c,end=<span class="string">&#x27;~&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>列表遍历</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> ls:	&lt;语句块&gt;ls = [<span class="number">123</span>,<span class="string">&#x27;PY&#x27;</span>,<span class="number">456</span>]<span class="keyword">for</span> item <span class="keyword">in</span> ls:    <span class="built_in">print</span>(item,end=<span class="string">&#x27;~~&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h6 id="无限循环"><a href="#无限循环" class="headerlink" title="无限循环"></a>无限循环</h6><ul>
+<li>由条件控制的循环运行方式</li>
+<li>while…</li>
+</ul>
+<h6 id="循环控制保留字"><a href="#循环控制保留字" class="headerlink" title="循环控制保留字"></a>循环控制保留字</h6><ul>
+<li>break &amp; continue<br>-break 跳出并结束当前整个循环<br>-continue 结束当此循环，继续执行后续次数循环<br>-break 和 continue 可以与for 和while 循环搭配使用<br>-一个break只能跳出一个循环</li>
+</ul>
+<h6 id="循环的高级用法"><a href="#循环的高级用法" class="headerlink" title="循环的高级用法"></a>循环的高级用法</h6><ul>
+<li><p>循环与else</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> &lt;循环变量&gt; <span class="keyword">in</span> &lt;遍历结构&gt;:	&lt;语句块<span class="number">1</span>&gt;<span class="keyword">else</span>:	&lt;语句块<span class="number">2</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> &lt;条件&gt;:	&lt;语句块<span class="number">1</span>&gt;<span class="keyword">else</span>:	&lt;语句块<span class="number">2</span>&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>当循环没有被break退出时，执行else语句块</p>
+</li>
+<li><p>else语句块作为正常完成循环的奖励</p>
+</li>
+<li><p>这里else的用法与异常处理中else用法相似</p>
+</li>
+</ul>
+<h3 id="模块3：random库的使用"><a href="#模块3：random库的使用" class="headerlink" title="模块3：random库的使用"></a>模块3：random库的使用</h3><ul>
+<li><p>random库是使用随机数的python标准库</p>
+</li>
+<li><p>伪随机数：采用梅森旋转算法生成的（伪）随机序列中元素</p>
+</li>
+<li><p>random库主要用于生成随机数</p>
+</li>
+<li><p>random 库包括两类函数，共计8个</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-基本随机函数：seed(),random()-扩展随机函数：randint(),getrandbits(),uniform(),randrange(),choice(),shuffle()</span><br></pre></td></tr></table></figure></li>
+<li><p>random.seed() 提供生成随机数的种子，如果不输入，默认为当前的系统时间</p>
+</li>
+<li><p>random.random() 生成随机数</p>
+</li>
+<li><p>当种子固定时，radom.random()生成的随机数顺序与大小是相同的，即：生成的随机数是可以复现的</p>
+</li>
+<li><p>random.randint(a,b)  生成一个a~b之间的<em>整数</em></p>
+</li>
+<li><p>random.randrange(m,n,[k])  生成一个m~n之间，以k为步长的随机<em>整数</em></p>
+</li>
+<li><p>random.getrandbits(k)  生成一个k比特长的随机<em>整数</em></p>
+</li>
+<li><p>random.uniform(a,b)  生成一个a~b之间的随机<em>小数</em></p>
+</li>
+<li><p>random.choice(seq)  从序列seq中随机选择一个元素</p>
+</li>
+<li><p>random.shuffle(seq)  将序列seq中的元素随机排列，返回打乱后的序列</p>
+</li>
+</ul>
+<h3 id="实例6：圆周率的计算"><a href="#实例6：圆周率的计算" class="headerlink" title="实例6：圆周率的计算"></a>实例6：圆周率的计算</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> randomimport timePoint_Number = <span class="number">10000</span>*10000Round_Point = 0StartTime = time.perf_counter()<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,Point_Number+<span class="number">1</span>):    x , y = random.random(),random.random()    distance = <span class="built_in">pow</span>((x*x+y*y),<span class="number">0.5</span>)    <span class="keyword">if</span> distance &lt;= <span class="number">1</span>:        Round_Point += 1Endtime = time.perf_counter()pi = (Round_Point / Point_Number)*4<span class="built_in">print</span>(<span class="string">&#x27;pi的值为：&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(pi))<span class="built_in">print</span>(<span class="string">&#x27;计算时间为：&#123;:.5f&#125;&#x27;</span>.<span class="built_in">format</span>(Endtime-StartTime))</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数和代码复用"><a href="#函数和代码复用" class="headerlink" title="函数和代码复用"></a>函数和代码复用</h2><h3 id="函数的定义与使用"><a href="#函数的定义与使用" class="headerlink" title="函数的定义与使用"></a>函数的定义与使用</h3><h6 id="函数的理解与定义"><a href="#函数的理解与定义" class="headerlink" title="函数的理解与定义"></a>函数的理解与定义</h6><ul>
+<li><p>函数是一段代码的表示</p>
+</li>
+<li><p>函数是一段具有特定功能的、可重用的语句组</p>
+</li>
+<li><p>函数是一种功能的抽象，一般函数表达特定功能</p>
+</li>
+<li><p>两个作用：<strong>降低编程难度</strong>和<strong>代码复用</strong></p>
+</li>
+<li><p>```python<br>def &lt;函数名&gt; (&lt;参数（0个或多个）&gt;)    &lt;函数体&gt;    return&lt;返回值&gt;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 函数可以有参数，也可以没有，但必须保留括号</span><br><span class="line"></span><br><span class="line">###### 函数的使用及调用</span><br><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line">###### 函数的参数传递</span><br><span class="line"></span><br><span class="line">- 函数定义时可以为某些参数指定默认值，构成可选参数*可选参数一定在必选参数后面，且可选参数应赋初值*</span><br><span class="line"></span><br><span class="line">  ```python</span><br><span class="line">  def &lt;函数名&gt; (&lt;非可选参数（必选参数&gt;,&lt;可选参数&gt;):</span><br><span class="line">  	&lt;函数题&gt;</span><br><span class="line">  	return &lt;返回值&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p><em>可变参数传递</em>，比确定参数总数量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> &lt;函数名&gt; (<span class="params">&lt;参数&gt;,*a</span>):</span></span><br><span class="line">	&lt;函数体&gt;</span><br><span class="line">	<span class="keyword">return</span> &lt;返回值&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​    *a 可以是其他的，如：  *b、*c</p>
+</li>
+</ul>
+<h6 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h6><ul>
+<li>函数调用时，参数可以按照位置或名称方式传递</li>
+<li>函数可以返回0个或多个结果<br>-return 保留字用来传递返回值<br>-函数可以有返回值，也可以没有，可以有return，也可以没有<br>-return可以传递0个返回值，也可以传递</li>
+</ul>
+<h6 id="局部变量-amp-全局变量"><a href="#局部变量-amp-全局变量" class="headerlink" title="局部变量&amp;全局变量"></a>局部变量&amp;全局变量</h6><p>变量和全局变量是不同变量</p>
+<ul>
+<li>局部变量是函数内部的占位符，与全局变量可能重名但不同</li>
+<li>函数运算结束后，局部变量被释放</li>
+<li>可以使用<em>global</em>保留字在函数内部使用全局变量</li>
+<li>局部变量为组合数据类型（如列表）且未创建，等同于全局变量</li>
+</ul>
+<h6 id="lambda函数"><a href="#lambda函数" class="headerlink" title="lambda函数"></a>lambda函数</h6><p>-lambda函数是一种匿名函数，即没有名字的函数<br>-使用lambda保留字定义，函数名是返回结果<br>-lambda函数用于定义简单的、能够在一行内表示的函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;函数名&gt; = <span class="keyword">lambda</span>&lt;参数&gt;:&lt;表达式&gt;等价于：<span class="function"><span class="keyword">def</span> &lt;函数名&gt;(<span class="params">&lt;参数&gt;</span>):</span>	&lt;函数体&gt;	<span class="keyword">return</span>&lt;返回值&gt;如：f = <span class="keyword">lambda</span> x,y:x+yf(<span class="number">10</span>,<span class="number">15</span>)25f = <span class="keyword">lambda</span> :<span class="string">&#x27;lambda函数&#x27;</span><span class="built_in">print</span>(f())<span class="keyword">lambda</span>函数</span><br></pre></td></tr></table></figure>
+
+<p><em>谨慎使用 lambda 函数</em></p>
+<h3 id="实例7：七段数码管绘制"><a href="#实例7：七段数码管绘制" class="headerlink" title="实例7：七段数码管绘制"></a>实例7：七段数码管绘制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> 画笔循环(<span class="params">draw</span>):</span></span><br><span class="line">    turtle.pensize(<span class="number">15</span>)</span><br><span class="line">    turtle.pendown() <span class="keyword">if</span> draw <span class="keyword">else</span> turtle.penup()</span><br><span class="line">    turtle.forward(<span class="number">40</span>)</span><br><span class="line">    turtle.right(<span class="number">90</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> 间隔控制(<span class="params">a, distance=<span class="number">30</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> a <span class="keyword">in</span> [<span class="string">&#x27;=&#x27;</span>, <span class="string">&#x27;+&#x27;</span>, <span class="string">&#x27;-&#x27;</span>]:</span><br><span class="line">        turtle.seth(<span class="number">0</span>)</span><br><span class="line">        turtle.penup()</span><br><span class="line">        turtle.forward(distance * <span class="number">2</span>)</span><br><span class="line">        turtle.pendown()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        turtle.seth(<span class="number">0</span>)</span><br><span class="line">        turtle.penup()</span><br><span class="line">        turtle.forward(distance)</span><br><span class="line">        turtle.pendown()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> 年月日绘制(<span class="params">a,b=<span class="number">40</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> a == <span class="string">&#x27;=&#x27;</span>:</span><br><span class="line">        turtle.pencolor(<span class="string">&#x27;green&#x27;</span>)</span><br><span class="line">        turtle.write(<span class="string">&#x27;年&#x27;</span>, align=<span class="string">&#x27;center&#x27;</span>, font=(<span class="string">&#x27;arial&#x27;</span>, b, <span class="string">&#x27;normal&#x27;</span>))</span><br><span class="line">    <span class="keyword">elif</span> a == <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">        turtle.pencolor(<span class="string">&#x27;purple&#x27;</span>)</span><br><span class="line">        turtle.write(<span class="string">&#x27;月&#x27;</span>, align=<span class="string">&#x27;center&#x27;</span>, font=(<span class="string">&#x27;arial&#x27;</span>, b, <span class="string">&#x27;normal&#x27;</span>))</span><br><span class="line">    <span class="keyword">elif</span> a == <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">        turtle.pencolor(<span class="string">&#x27;red&#x27;</span>)</span><br><span class="line">        turtle.write(<span class="string">&#x27;日&#x27;</span>, align=<span class="string">&#x27;left&#x27;</span>, font=(<span class="string">&#x27;arial&#x27;</span>, b, <span class="string">&#x27;normal&#x27;</span>))</span><br><span class="line">    <span class="keyword">elif</span> a == <span class="string">&#x27;*&#x27;</span>:</span><br><span class="line">        turtle.pencolor(<span class="string">&#x27;green&#x27;</span>)</span><br><span class="line">        turtle.write(<span class="string">&#x27;时&#x27;</span>, align=<span class="string">&#x27;left&#x27;</span>, font=(<span class="string">&#x27;arial&#x27;</span>, b, <span class="string">&#x27;normal&#x27;</span>))</span><br><span class="line">    <span class="keyword">elif</span> a == <span class="string">&#x27;/&#x27;</span>:</span><br><span class="line">        turtle.pencolor(<span class="string">&#x27;yellow&#x27;</span>)</span><br><span class="line">        turtle.write(<span class="string">&#x27;分&#x27;</span>, align=<span class="string">&#x27;left&#x27;</span>, font=(<span class="string">&#x27;arial&#x27;</span>, b, <span class="string">&#x27;normal&#x27;</span>))</span><br><span class="line">    <span class="keyword">elif</span> a == <span class="string">&#x27;&amp;&#x27;</span>:</span><br><span class="line">        turtle.pencolor(<span class="string">&#x27;purple&#x27;</span>)</span><br><span class="line">        turtle.write(<span class="string">&#x27;秒&#x27;</span>, align=<span class="string">&#x27;left&#x27;</span>, font=(<span class="string">&#x27;arial&#x27;</span>, b, <span class="string">&#x27;normal&#x27;</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> 七段数字管绘制(<span class="params">number</span>):</span></span><br><span class="line">    <span class="comment"># random.seed(number + random.random())</span></span><br><span class="line">    <span class="comment"># try:</span></span><br><span class="line">    turtle.pencolor(random.random(), random.random(), random.random())</span><br><span class="line"></span><br><span class="line">    画笔循环(<span class="literal">True</span>) <span class="keyword">if</span> number <span class="keyword">in</span> [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">9</span>] <span class="keyword">else</span> 画笔循环(<span class="literal">False</span>)</span><br><span class="line">    画笔循环(<span class="literal">True</span>) <span class="keyword">if</span> number <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>] <span class="keyword">else</span> 画笔循环(<span class="literal">False</span>)</span><br><span class="line">    画笔循环(<span class="literal">True</span>) <span class="keyword">if</span> number <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">9</span>] <span class="keyword">else</span> 画笔循环(<span class="literal">False</span>)</span><br><span class="line">    画笔循环(<span class="literal">True</span>) <span class="keyword">if</span> number <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">8</span>] <span class="keyword">else</span> 画笔循环(<span class="literal">False</span>)</span><br><span class="line">    turtle.left(<span class="number">90</span>)</span><br><span class="line">    画笔循环(<span class="literal">True</span>) <span class="keyword">if</span> number <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">9</span>] <span class="keyword">else</span> 画笔循环(<span class="literal">False</span>)</span><br><span class="line">    画笔循环(<span class="literal">True</span>) <span class="keyword">if</span> number <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>] <span class="keyword">else</span> 画笔循环(<span class="literal">False</span>)</span><br><span class="line">    画笔循环(<span class="literal">True</span>) <span class="keyword">if</span> number <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>] <span class="keyword">else</span> 画笔循环(<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> 时间绘制(<span class="params">time</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(time)):</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            七段数字管绘制(<span class="built_in">int</span>(time[i]))</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            年月日绘制(time[i])</span><br><span class="line">        <span class="keyword">finally</span>:</span><br><span class="line">            间隔控制(time[i])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = time.gmtime()</span><br><span class="line">time = time.strftime(<span class="string">&#x27;%Y=%m+%d-%H*%M/%S&amp;&#x27;</span>)</span><br><span class="line">turtle.penup()</span><br><span class="line">turtle.goto(-<span class="number">650</span>, <span class="number">0</span>)</span><br><span class="line">turtle.pendown()</span><br><span class="line">时间绘制(time)</span><br><span class="line">turtle.done()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="代码复用与函数递归"><a href="#代码复用与函数递归" class="headerlink" title="代码复用与函数递归"></a>代码复用与函数递归</h3><h5 id="代码复用"><a href="#代码复用" class="headerlink" title="代码复用"></a>代码复用</h5><h6 id="代码资源化"><a href="#代码资源化" class="headerlink" title="代码资源化"></a>代码资源化</h6><ul>
+<li>程序代码是一种用来表达计算的‘资源’</li>
+</ul>
+<h6 id="代码抽象化"><a href="#代码抽象化" class="headerlink" title="代码抽象化"></a>代码抽象化</h6><ul>
+<li>使用函数等方法对代码赋予更高级别的定义</li>
+</ul>
+<h6 id="代码复用-1"><a href="#代码复用-1" class="headerlink" title="代码复用"></a>代码复用</h6><ul>
+<li>同一份代码在需要时可以被重复利用</li>
+</ul>
+<p> <em>函数和对象是代码复用的两种主要形式</em></p>
+<h6 id="模块化设计"><a href="#模块化设计" class="headerlink" title="模块化设计"></a>模块化设计</h6><ul>
+<li><em>分而治之</em></li>
+<li>通过函数或对象封装将程序划分为模块及模块间的表达</li>
+<li>具体包括：主程序、子程序和子程序间的关系</li>
+<li>分而治之：一种分而治之、分层抽象、体系化的设计思路</li>
+</ul>
+<h6 id="紧耦合-amp-松耦合"><a href="#紧耦合-amp-松耦合" class="headerlink" title="紧耦合&amp;松耦合"></a>紧耦合&amp;松耦合</h6><ul>
+<li>紧耦合：<br>两个部分之间交流很多，无法独立存在</li>
+<li>松耦合：<br>两个部分之间交流较少，可以独立存在</li>
+<li>模块内部紧耦合，模块之间松耦合</li>
+</ul>
+<h5 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h5><h6 id="递归的定义"><a href="#递归的定义" class="headerlink" title="递归的定义"></a>递归的定义</h6><ul>
+<li>调用函数自生的方式就是递归</li>
+</ul>
+<h6 id="两个关键特征"><a href="#两个关键特征" class="headerlink" title="两个关键特征"></a>两个关键特征</h6><ul>
+<li>链条<br>计算过程中存在递归链条</li>
+<li>基例<br>存在一个或多个不需要再次递归的基例</li>
+<li><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211114135129897.png" alt="image-20211114135129897" class="lazyload"></li>
+</ul>
+<h6 id="递归的实现"><a href="#递归的实现" class="headerlink" title="递归的实现"></a>递归的实现</h6><ul>
+<li>函数+分支语句</li>
+<li>递归本身是一个函数，需要函数定义方式描述</li>
+<li>函数内部，采用分支语句对输入参数进行判断</li>
+<li>基例和链条，分别编写对应的代码</li>
+</ul>
+<h6 id="递归简单小例子"><a href="#递归简单小例子" class="headerlink" title="递归简单小例子"></a>递归简单小例子</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#计算n!def fact(n):	if n == 1:		return 1	else:		return fact(n-1) * n</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#利用递归实现将字符串反向输出</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rev</span>(<span class="params">s</span>):</span></span><br><span class="line">    a  =<span class="built_in">str</span>(s)</span><br><span class="line">    <span class="keyword">if</span> a == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> rev(a[<span class="number">1</span>::]) + a[<span class="number">0</span>]</span><br><span class="line">a = <span class="number">123456</span></span><br><span class="line"><span class="built_in">print</span>(rev(a))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#利用递归输入斐波那契数列对应位数的值</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">F</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span> <span class="keyword">or</span> n == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> F(n-<span class="number">1</span>)+F(n-<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(F(<span class="number">23</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="模块4：PyInstaller库的使用"><a href="#模块4：PyInstaller库的使用" class="headerlink" title="模块4：PyInstaller库的使用"></a>模块4：PyInstaller库的使用</h3><h6 id="Pyinstaller库的安装"><a href="#Pyinstaller库的安装" class="headerlink" title="Pyinstaller库的安装"></a>Pyinstaller库的安装</h6><ul>
+<li>使用命令行安装<br>输入：pip install Pyinstaller 将自动联网进行安装</li>
+</ul>
+<p><em>Pyinstaller是命令行的执行程序，而不是python下的程序指令</em></p>
+<h6 id="Pyinstaller库的使用"><a href="#Pyinstaller库的使用" class="headerlink" title="Pyinstaller库的使用"></a>Pyinstaller库的使用</h6><ul>
+<li>在cmd中，输入：pyinstaller -F &lt;文件名.py&gt;<br>这将生成三个新的文件夹，为：<img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211122101120011.png" alt="image-20211122101120011" class="lazyload"></li>
+<li>build与pycache可以安全的删除</li>
+</ul>
+<h6 id="Pyinstaller库的常用参数"><a href="#Pyinstaller库的常用参数" class="headerlink" title="Pyinstaller库的常用参数"></a>Pyinstaller库的常用参数</h6><ul>
+<li>-h 查看帮助</li>
+<li>-clean 清理打包过程中生成的临时文件，如：build与pycache</li>
+<li>-D 默认值，生成dist文件夹，不推荐使用</li>
+<li>-F 在dist文件夹中只生产独立的打包文件</li>
+<li>-i &lt;图标文件名.ico&gt; 指定打包程序使用的图表（icon）文件</li>
+</ul>
+<h3 id="实例8：科赫雪花小包裹"><a href="#实例8：科赫雪花小包裹" class="headerlink" title="实例8：科赫雪花小包裹"></a>实例8：科赫雪花小包裹</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">koch</span>(<span class="params">size,n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        turtle.forward(size)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> seth <span class="keyword">in</span> [<span class="number">0</span>,<span class="number">60</span>,-<span class="number">120</span>,<span class="number">60</span>]:</span><br><span class="line">            turtle.left(seth)</span><br><span class="line">            koch(size/<span class="number">3</span>,n-<span class="number">1</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>(<span class="params">a,阶数</span>):</span></span><br><span class="line">    turtle.setup(<span class="number">800</span>,<span class="number">800</span>)</span><br><span class="line">    turtle.penup()</span><br><span class="line">    turtle.goto(-<span class="number">300</span>,<span class="number">200</span>)</span><br><span class="line">    turtle.pendown()</span><br><span class="line">    turtle.pensize(<span class="number">2</span>)</span><br><span class="line">    koch(a,阶数)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(a, 阶数)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(a, 阶数)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    turtle .hedeturtle()</span><br><span class="line"></span><br><span class="line">main(<span class="number">1000000</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+<h6 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a><em>单元测试</em></h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#连续质数的计算</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> 判断(<span class="params">a</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, a):</span><br><span class="line">        <span class="keyword">if</span> a % i <span class="keyword">in</span> [<span class="number">0</span>]:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">prime</span>(<span class="params">m, ls=<span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    m = <span class="built_in">int</span>(<span class="built_in">round</span>(m, <span class="number">0</span>))</span><br><span class="line">    <span class="keyword">while</span> count &lt; <span class="number">5</span>:</span><br><span class="line">        <span class="keyword">if</span> 判断(m):</span><br><span class="line">            ls = ls + <span class="built_in">str</span>(m) + <span class="string">&#x27;,&#x27;</span></span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">            m += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            m += <span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(ls[<span class="number">0</span>:-<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n = <span class="built_in">eval</span>(<span class="built_in">input</span>())</span><br><span class="line">prime(n)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="组合数据类型"><a href="#组合数据类型" class="headerlink" title="组合数据类型"></a>组合数据类型</h2><h3 id="集合类型及操作"><a href="#集合类型及操作" class="headerlink" title="集合类型及操作"></a>集合类型及操作</h3><h5 id="集合类型定义"><a href="#集合类型定义" class="headerlink" title="集合类型定义"></a>集合类型定义</h5><p><em>集合是多个元素的无序组合</em></p>
+<ul>
+<li>集合类型与数学中的集合概念一致</li>
+<li>集合元素之间无序，每个元素唯一，不存在相同元素</li>
+<li>集合元素不可更改，不能是可变数据类型</li>
+<li>集合用大括号 {} 表示，元素之间用逗号分隔</li>
+<li>建立集合类型用 {} 或 set()</li>
+<li>建立一个空集合时，必须使用 set()</li>
+</ul>
+<p><strong>重点</strong></p>
+<p><em>集合用大括号 {} 表示，元素间用 , 分隔</em></p>
+<p><em>集合中的每个元素唯一，不存在相同元素</em></p>
+<p><em>集合元素之间无序</em></p>
+<h5 id="集合操作符"><a href="#集合操作符" class="headerlink" title="集合操作符"></a>集合操作符</h5><h6 id="六个操作符，四个运算操作符，以及两个关系操作符"><a href="#六个操作符，四个运算操作符，以及两个关系操作符" class="headerlink" title="六个操作符，四个运算操作符，以及两个关系操作符"></a><em>六个操作符</em>，四个运算操作符，以及两个关系操作符</h6><p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211128173119176.png" alt="image-20211128173119176" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211128173058048.png" alt="image-20211128173058048" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211128173231459.png" alt="image-20211128173231459" class="lazyload"></p>
+<p> S  &lt;= T 或 S &lt; T 返回Ture/False，判断S和T的子集关系</p>
+<p>S  &gt;= T 或 S &gt; T 返回True/False，判断S和T的包含关系</p>
+<p><em>判断S 与 T 的包含关系</em></p>
+<h6 id="四个增强操作符"><a href="#四个增强操作符" class="headerlink" title="四个增强操作符"></a><em>四个增强操作符</em></h6><p>通过四种操作符与赋值符号(=)的组合，对集合 S 更新</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211128173757595.png" alt="image-20211128173757595" class="lazyload"></p>
+<h5 id="集合处理方法"><a href="#集合处理方法" class="headerlink" title="集合处理方法"></a>集合处理方法</h5><h6 id="操作函数或方法"><a href="#操作函数或方法" class="headerlink" title="操作函数或方法"></a><em>操作函数或方法</em></h6><p>S.add(x) 如果x不在S中，将x增加到S</p>
+<p>S.discard(x) 移除S中的x，如果S中没有x也不会报错</p>
+<p>S.remove(x) 移除S中的x，如果S中没有x，产生KeyError 异常</p>
+<p>S.clear() 移除S中的所有元素</p>
+<p>S.pop() 随机返回S中的一个元素，并更新S，若S为空，则产生KeyError异常<br><em>取出S中的一个元素，即：将这个元素从S中删除的同时，输出</em></p>
+<p>S.copy() 返回集合S的一个副本</p>
+<p>len(S) 返回集合S的元素个数</p>
+<p>x in S 判断 x 是否在S中，在返回True ，否则返回False</p>
+<p>x not in S 判断 x 是否在 S 中，不在返回True，否则返回True</p>
+<p>set(x) 将其他类型变量x转换为集合类型</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211128181507246.png" alt="image-20211128181507246" class="lazyload"></p>
+<h5 id="集合类型应用场景"><a href="#集合类型应用场景" class="headerlink" title="集合类型应用场景"></a>集合类型应用场景</h5><ul>
+<li><p>包含关系比较</p>
+</li>
+<li><p><strong>数据去重</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]s = <span class="built_in">set</span>(ls)<span class="built_in">print</span>(s)</span><br></pre></td></tr></table></figure>
+
+<p>这将使得ls中重复的元素被去除</p>
+</li>
+</ul>
+<h3 id="序列类型及操作"><a href="#序列类型及操作" class="headerlink" title="序列类型及操作"></a><strong>序列类型及操作</strong></h3><h4 id="元组类型"><a href="#元组类型" class="headerlink" title="元组类型"></a>元组类型</h4><h4 id="列表类型"><a href="#列表类型" class="headerlink" title="列表类型"></a>列表类型</h4><h6 id="序列类型定义"><a href="#序列类型定义" class="headerlink" title="序列类型定义"></a>序列类型定义</h6><p><em>序列是具有先后关系的一组元素</em></p>
+<ul>
+<li>序列是一位元素向量，元素类型可以不同</li>
+<li>类似数学元素序列：S0,S1…Sn-1</li>
+<li>元素间由序号引导，通过下标访问序列的特定元素</li>
+</ul>
+<p><em>序列是一个基类类型，故而一般不使用，而是使用其衍生出的：字符串类型、元组类型、列表类型</em>序列类型中的操作，在衍生的类型中都是适用的，而衍生出的三种类型又有自己独特的操作能力</p>
+<h6 id="序列处理函数及方法"><a href="#序列处理函数及方法" class="headerlink" title="序列处理函数及方法"></a>序列处理函数及方法</h6><p><em>6个操作符</em></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211129100359173.png" alt="image-20211129100359173" class="lazyload"></p>
+<p><em>5个函数和方法</em></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211129100603792.png" alt="image-20211129100603792" class="lazyload"></p>
+<h6 id="元组类型及操作"><a href="#元组类型及操作" class="headerlink" title="元组类型及操作"></a>元组类型及操作</h6><p><em>元组是序列类型的一种拓展，继承序列类型的全部通用操作</em></p>
+<ul>
+<li>元组是一种序列类型，一旦创建就不能修改</li>
+<li>适用小括号()或tuple()创建，用 , 分隔</li>
+<li>可以使用或不使用小括号</li>
+<li>因为创建后不能修改，因此没有特殊操作</li>
+</ul>
+<p><strong>元组类型就是将元素进行有序的排列，一旦定义就不能改变</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;a&#x27;</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="string">&#x27;efs&#x27;</span>b = 0001,023234,<span class="string">&#x27;sdf&#x27;</span>,ac = b[-<span class="number">1</span>][<span class="number">5</span>]<span class="built_in">print</span>(c)&gt;&gt;&gt; efs</span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="列表类型及操作"><a href="#列表类型及操作" class="headerlink" title="列表类型及操作"></a>列表类型及操作</h6><p><em>列表是序列类型的一种拓展，十分常用</em></p>
+<ul>
+<li><p>列表是一种序列类型，创建后可以随意修改</p>
+</li>
+<li><p>使用方括号 [] 或 list() 创建，元素间用逗号 , 分隔</p>
+</li>
+<li><p>列表中的各个元素类型可以不同，且没有长度限制</p>
+</li>
+<li><p>```python<br>#使用list()函数创建列表时，应为：TheFirstlist = list((1,2,3,’ddgf’,6))</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">*列表类型操作函数和方法*</span><br><span class="line"></span><br><span class="line">![image-20211129103017211](C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211129103017211.png)</span><br><span class="line"></span><br><span class="line">![image-20211129103227422](C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211129103227422.png)</span><br><span class="line"></span><br><span class="line">![image-20211129103614988](C:\Users\Administrator~\AppData\Roaming\Typora\typora-user-images\image-20211129103614988.png)</span><br><span class="line"></span><br><span class="line">- ls.append(x)  在列表ls最后增加一个元素x</span><br><span class="line">- ls.clear()  删除列表ls中的所有元素</span><br><span class="line">- ls.copy()  生成一个新的列表，赋值ls中所有元素</span><br><span class="line">- ls.insert(i,x)  在列表ls的第i位置增加元素x，是指在第 i 号位置加入 x</span><br><span class="line">- ls.pop(i)  将列表ls中第i位置元素取出并删除该元素</span><br><span class="line">- ls.remove(x)  将列表ls中出现的第一个x删除</span><br><span class="line">- ls.reverse()  将列表ls 中的元素进行反转</span><br><span class="line"></span><br><span class="line">###### 序列类型应用场景</span><br><span class="line"></span><br><span class="line">- **数据表示**</span><br><span class="line">- 数据保护</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 实例9：基本统计值计算</span><br><span class="line"></span><br><span class="line">*基本统计值*</span><br><span class="line"></span><br><span class="line">- 总个数：len()</span><br><span class="line">- 求和：for...in</span><br><span class="line">- 平均值</span><br><span class="line">- 方差：各数据与平均值的差的平方的和的平均数~标准差</span><br><span class="line">- 中位数：排序，奇数找中间的1个，偶数找中间两个的平均数</span><br><span class="line">- sorted()函数，对列表中的数据进行排序</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"># 基本统计值def getNumer():    ls = []    Number = input(&#x27;请输入数字，以回车结束&#x27;)    while Number != &#x27;&#x27;:        ls.append(eval(Number))        Number = input(&#x27;请输入数字，以回车结束&#x27;)    return lsdef avg(a):    sum = 0    for i in a:        sum = sum + i    return sum / len(a)def 方差(a, b):    c = 0    for i in a:        c = pow((i - b), 2) / len(a)    return cdef 中位数(a):    sorted(a)    lennumber = len(a)    b = 0    if lennumber % 2 == 0:        b = (a[int(len(a) / 2)] + a[int(len(a) / 2 + 1)]) / 2    else:        b = a[int(round(len(a) / 2, 0) - 1)]    return bls = getNumer()print(&#x27;平均值为：&#123;&#125;,方差为：&#123;&#125;,中位数为：&#123;&#125;&#x27;.format(avg(ls), 方差(ls, avg(ls)), 中位数(ls)))</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="字典类型及操作"><a href="#字典类型及操作" class="headerlink" title="字典类型及操作"></a>字典类型及操作</h3><h4 id="理解映射"><a href="#理解映射" class="headerlink" title="理解映射"></a>理解<em>映射</em></h4><p><em>映射是一种键（索引）和值（数据）的对应</em></p>
+<h5 id="字典类型定义"><a href="#字典类型定义" class="headerlink" title="字典类型定义"></a>字典类型定义</h5><p><em>字典类型是“映射”的体现</em></p>
+<ul>
+<li>键值对：键是数据索引的拓展</li>
+<li>字典是键值对的集合，键值对之间是无序的</li>
+<li>采用大括号 {} 和dict() 创建，键值对用冒号 : 表示</li>
+<li>如：{&lt;键1&gt;:&lt;值1&gt;,&lt;键2&gt;:&lt;值2&gt;,……,&lt;键n&gt;:&lt;值n&gt;}</li>
+</ul>
+<h5 id="字典处理函数及方法"><a href="#字典处理函数及方法" class="headerlink" title="字典处理函数及方法"></a>字典处理函数及方法</h5><ul>
+<li>del d[k]  删除字典d中索引k对应的值</li>
+<li>k in d  判断键k是否在字典d中，在返回True，否则返回False，<em>注意：k为字典d的索引，而非值</em></li>
+<li>d.keys()  返回字典d中所有的<em>键</em>信息</li>
+<li>d.values()  返回字典中所有的<em>值</em>信息</li>
+<li>d.items()  返回字典中所有的<em>键值对</em>信息</li>
+<li><strong>d.get(k,<default>)</strong>  键k存在，返回相应的值，不在则返回<default>值</li>
+<li>d.pop(k,<default>)  键k存在，取出对用的值，不在则返回<default>值</li>
+<li>d.popitem()  随机从字典d中取出一个键值对，并以元组形式返回</li>
+<li>d.clear()  删除字典d中的所有键值对</li>
+<li>len(d)  返回字典d中元素（键值对）的个数</li>
+</ul>
+<h5 id="字典类型应用场景"><a href="#字典类型应用场景" class="headerlink" title="字典类型应用场景"></a>字典类型应用场景</h5><ul>
+<li>映射的表达</li>
+<li>映射无处不在，键值对无处不在</li>
+<li>例如：统计数据出现的次数，数据是键，次数是值</li>
+<li>最主要的作用：<em>表达键值对数据，进而操作他们</em></li>
+<li><em>表达一组数据，<strong>用恰当的关系表达一组数据</strong></em>进而更好的操作他们</li>
+<li>元素遍历<br>for k in d :<pre><code>   &lt;语句块&gt;
+</code></pre>
+</li>
+<li></li>
+</ul>
+<h3 id="模块5：jieba库的使用"><a href="#模块5：jieba库的使用" class="headerlink" title="模块5：jieba库的使用"></a>模块5：jieba库的使用</h3><h6 id="jieba库概述"><a href="#jieba库概述" class="headerlink" title="jieba库概述"></a>jieba库概述</h6><ul>
+<li>jieba是优秀的中文分词第三方库，需要额外安装</li>
+<li>中文文本需要通过分词获得单个的词语</li>
+<li>jieba库提供三种分词模式，最简单只需掌握一个函数</li>
+</ul>
+<h6 id="jieba分词的原理"><a href="#jieba分词的原理" class="headerlink" title="jieba分词的原理"></a>jieba分词的原理</h6><ul>
+<li>利用一个中文词库，确定汉字之间的关联</li>
+<li>汉字间概率大的组成词组，形成分词结果</li>
+<li>除了分词，用户还可以添加自定义的词组</li>
+</ul>
+<h6 id="jieba库的使用"><a href="#jieba库的使用" class="headerlink" title="jieba库的使用"></a>jieba库的使用</h6><h6 id="jieba分词的三种模式"><a href="#jieba分词的三种模式" class="headerlink" title="jieba分词的三种模式"></a>jieba分词的三种模式</h6><ul>
+<li>精确模式、全模式、搜索引擎模式</li>
+<li>精确模式<br>把文本精确的且分开，不存在冗余单词</li>
+<li>全模式<br>把文本中所有可能的词语都扫描出来，有冗余</li>
+<li>搜索引擎模式<br>在精确模式基础上，对长词再次切分</li>
+</ul>
+<h6 id="jieba库常用函数"><a href="#jieba库常用函数" class="headerlink" title="jieba库常用函数"></a>jieba库常用函数</h6><ul>
+<li><p>jieba.lcut(s)  精确模式，返回一个列表类型的分词结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jieba.lcut(<span class="string">&#x27;中国是一个伟大的国家&#x27;</span>)&gt;&gt;&gt;[<span class="string">&#x27;中国&#x27;</span>,<span class="string">&#x27;是&#x27;</span>,<span class="string">&#x27;一个&#x27;</span>,<span class="string">&#x27;伟大&#x27;</span>,<span class="string">&#x27;的&#x27;</span>,<span class="string">&#x27;国家&#x27;</span>]</span><br></pre></td></tr></table></figure></li>
+<li><p>jieba.lcut(s,cut_all = True)  全模式，返回一个列表类型的分词结果，存在冗余</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jieba.lcut(<span class="string">&#x27;中国是一个伟大的国家&#x27;</span>,cut_all = <span class="literal">True</span>)&gt;&gt;&gt; [<span class="string">&#x27;中国&#x27;</span>,<span class="string">&#x27;国是&#x27;</span>,<span class="string">&#x27;是&#x27;</span>,<span class="string">&#x27;一个&#x27;</span>,<span class="string">&#x27;伟大&#x27;</span>,<span class="string">&#x27;的&#x27;</span>,<span class="string">&#x27;国家&#x27;</span>]</span><br></pre></td></tr></table></figure></li>
+<li><p>jieba.lcut_for_search(s)  搜索引擎模式，返回一个列表类型的分词结果，存在冗余</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jieba.lcut_for_search(<span class="string">&#x27;中华人民共和国是伟大的&#x27;</span>)&gt;&gt;&gt;[<span class="string">&#x27;中华&#x27;</span>, <span class="string">&#x27;华人&#x27;</span>, <span class="string">&#x27;人民&#x27;</span>, <span class="string">&#x27;共和&#x27;</span>, <span class="string">&#x27;共和国&#x27;</span>, <span class="string">&#x27;中华人民共和国&#x27;</span>, <span class="string">&#x27;是&#x27;</span>, <span class="string">&#x27;伟大&#x27;</span>, <span class="string">&#x27;的&#x27;</span>]</span><br></pre></td></tr></table></figure></li>
+<li><p>jieba.add_word(w)  向分词词典增加新词w</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jieba.add_word(<span class="string">&#x27;蟒蛇语言&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>jieba.lcut(s)</strong></p>
+<h3 id="实例10：文本词频统计"><a href="#实例10：文本词频统计" class="headerlink" title="实例10：文本词频统计"></a>实例10：文本词频统计</h3><ul>
+<li>哈姆雷特下载地址<br><a target="_blank" rel="noopener" href="https://python123.io/resources/pye/hamlet.txt">https://python123.io/resources/pye/hamlet.txt</a></li>
+<li>《三国演义》下载地址<br><a target="_blank" rel="noopener" href="http://python123.io/resources/pye/threekingdoms.txt">http://python123.io/resources/pye/threekingdoms.txt</a></li>
+</ul>
+<h5 id="哈姆雷特-HAMLET-统计"><a href="#哈姆雷特-HAMLET-统计" class="headerlink" title="哈姆雷特(HAMLET)统计"></a>哈姆雷特(HAMLET)统计</h5>
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>Author：</strong>John Doe<br>
+        <strong>Link：</strong><a href="http://example.com/2021/12/09/python%E5%9C%A3%E7%BB%8F/" title="http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;12&#x2F;09&#x2F;python%E5%9C%A3%E7%BB%8F&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;12&#x2F;09&#x2F;python%E5%9C%A3%E7%BB%8F&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Python/" rel="tag">Python</a>
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python-%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">Python 笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95"><span class="toc-number">1.1.</span> <span class="toc-text">索引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%87%E7%89%87"><span class="toc-number">1.2.</span> <span class="toc-text">切片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">1.3.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E5%87%BD%E6%95%B0input"><span class="toc-number">1.5.1.</span> <span class="toc-text">输入函数input()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E5%87%BD%E6%95%B0-print"><span class="toc-number">1.5.2.</span> <span class="toc-text">-输出函数 print()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#import-%E4%BF%9D%E7%95%99%E5%AD%97"><span class="toc-number">1.5.3.</span> <span class="toc-text">-import 保留字</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#turtle-%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.5.3.1.</span> <span class="toc-text">-turtle 库的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Python%E8%AE%A1%E7%AE%97%E7%94%9F%E6%80%81-%E6%A0%87%E5%87%86%E5%BA%93-%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93"><span class="toc-number">1.5.3.1.1.</span> <span class="toc-text">Python计算生态 &#x3D; 标准库 + 第三方库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#turtle%E5%BA%93%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.5.3.1.2.</span> <span class="toc-text">-turtle库基本介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#turtle%E7%BB%98%E5%9B%BE%E7%AA%97%E4%BD%93%E5%B8%83%E5%B1%80"><span class="toc-number">1.5.3.1.3.</span> <span class="toc-text">-turtle绘图窗体布局</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#turtle%E7%A9%BA%E9%97%B4%E5%9D%90%E6%A0%87%E4%BD%93%E7%B3%BB"><span class="toc-number">1.5.3.1.4.</span> <span class="toc-text">-turtle空间坐标体系</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#turtle%E8%A7%92%E5%BA%A6%E5%9D%90%E6%A0%87%E4%BD%93%E7%B3%BB"><span class="toc-number">1.5.3.1.5.</span> <span class="toc-text">-turtle角度坐标体系</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#RGB%E8%89%B2%E5%BD%A9%E4%BD%93%E7%B3%BB"><span class="toc-number">1.5.3.1.6.</span> <span class="toc-text">-RGB色彩体系</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#turtle%E7%A8%8B%E5%BA%8F%E8%AF%AD%E6%B3%95%E5%85%83%E7%B4%A0%E5%88%86%E6%9E%90"><span class="toc-number">1.5.4.</span> <span class="toc-text">turtle程序语法元素分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%93%E5%BC%95%E7%94%A8%E4%B8%8Eimport"><span class="toc-number">1.5.4.1.</span> <span class="toc-text">库引用与import</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BA%93%E5%BC%95%E7%94%A8"><span class="toc-number">1.5.4.1.0.1.</span> <span class="toc-text">库引用</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#import%E6%9B%B4%E5%A4%9A%E7%94%A8%E6%B3%95"><span class="toc-number">1.5.4.1.0.2.</span> <span class="toc-text">import更多用法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#turtle%E7%94%BB%E7%AC%94%E6%8E%A7%E5%88%B6%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.4.2.</span> <span class="toc-text">turtle画笔控制函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#turtle%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.4.3.</span> <span class="toc-text">turtle运动控制函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#turtle%E6%96%B9%E5%90%91%E6%8E%A7%E5%88%B6%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.4.4.</span> <span class="toc-text">turtle方向控制函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.5.4.5.</span> <span class="toc-text">基本循环语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%9CPython%E8%9F%92%E8%9B%87%E7%BB%98%E5%88%B6%E2%80%9D%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90"><span class="toc-number">1.5.4.6.</span> <span class="toc-text">“Python蟒蛇绘制”代码分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.</span> <span class="toc-text">基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B%E5%8F%8A%E6%93%8D%E4%BD%9C"><span class="toc-number">1.6.1.</span> <span class="toc-text">数字类型及操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B3%EF%BC%9A%E5%A4%A9%E5%A4%A9%E5%90%91%E4%B8%8A%E7%9A%84%E5%8A%9B%E9%87%8F"><span class="toc-number">1.6.2.</span> <span class="toc-text">实例3：天天向上的力量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B%E5%8F%8A%E6%93%8D%E4%BD%9C"><span class="toc-number">1.6.3.</span> <span class="toc-text">字符串类型及操作</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95-1"><span class="toc-number">1.6.3.0.0.1.</span> <span class="toc-text">索引</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%88%87%E7%89%87-1"><span class="toc-number">1.6.3.0.0.2.</span> <span class="toc-text">切片</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E7%AC%A6"><span class="toc-number">1.6.3.0.0.3.</span> <span class="toc-text">转义符  \</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-number">1.6.3.0.0.4.</span> <span class="toc-text">字符串操作符</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.3.0.0.5.</span> <span class="toc-text">字符串处理函数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="toc-number">1.6.3.0.0.6.</span> <span class="toc-text">字符串处理方法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">1.6.3.0.0.7.</span> <span class="toc-text">字符串类型的格式化</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%972%EF%BC%9Atime%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.6.4.</span> <span class="toc-text">模块2：time库的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">1.6.4.0.0.1.</span> <span class="toc-text">时间格式化</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B4%EF%BC%9A%E6%96%87%E6%9C%AC%E8%BF%9B%E5%BA%A6%E6%9D%A1"><span class="toc-number">1.6.5.</span> <span class="toc-text">实例4：文本进度条</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84"><span class="toc-number">1.7.</span> <span class="toc-text">程序的控制结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="toc-number">1.7.1.</span> <span class="toc-text">程序的分支结构</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%8D%95%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="toc-number">1.7.1.0.0.1.</span> <span class="toc-text">单分支结构</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="toc-number">1.7.1.0.0.2.</span> <span class="toc-text">二分支结构</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%A4%9A%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="toc-number">1.7.1.0.0.3.</span> <span class="toc-text">多分支结构</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-number">1.7.1.0.0.4.</span> <span class="toc-text">异常处理</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B5%EF%BC%9A%E8%BA%AB%E4%BD%93%E8%B4%A8%E9%87%8F%E6%8C%87%E6%95%B0BMI"><span class="toc-number">1.7.2.</span> <span class="toc-text">实例5：身体质量指数BMI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-number">1.7.3.</span> <span class="toc-text">程序的循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.7.3.0.0.1.</span> <span class="toc-text">遍历循环</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.7.3.0.0.2.</span> <span class="toc-text">无限循环</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E4%BF%9D%E7%95%99%E5%AD%97"><span class="toc-number">1.7.3.0.0.3.</span> <span class="toc-text">循环控制保留字</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E7%9A%84%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95"><span class="toc-number">1.7.3.0.0.4.</span> <span class="toc-text">循环的高级用法</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%973%EF%BC%9Arandom%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.7.4.</span> <span class="toc-text">模块3：random库的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B6%EF%BC%9A%E5%9C%86%E5%91%A8%E7%8E%87%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-number">1.7.5.</span> <span class="toc-text">实例6：圆周率的计算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%92%8C%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%94%A8"><span class="toc-number">1.8.</span> <span class="toc-text">函数和代码复用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="toc-number">1.8.1.</span> <span class="toc-text">函数的定义与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9A%E4%B9%89"><span class="toc-number">1.8.1.0.0.1.</span> <span class="toc-text">函数的理解与定义</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">1.8.1.0.0.2.</span> <span class="toc-text">函数的返回值</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F-amp-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">1.8.1.0.0.3.</span> <span class="toc-text">局部变量&amp;全局变量</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#lambda%E5%87%BD%E6%95%B0"><span class="toc-number">1.8.1.0.0.4.</span> <span class="toc-text">lambda函数</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B7%EF%BC%9A%E4%B8%83%E6%AE%B5%E6%95%B0%E7%A0%81%E7%AE%A1%E7%BB%98%E5%88%B6"><span class="toc-number">1.8.2.</span> <span class="toc-text">实例7：七段数码管绘制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%94%A8%E4%B8%8E%E5%87%BD%E6%95%B0%E9%80%92%E5%BD%92"><span class="toc-number">1.8.3.</span> <span class="toc-text">代码复用与函数递归</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%94%A8"><span class="toc-number">1.8.3.0.1.</span> <span class="toc-text">代码复用</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%B5%84%E6%BA%90%E5%8C%96"><span class="toc-number">1.8.3.0.1.1.</span> <span class="toc-text">代码资源化</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%8A%BD%E8%B1%A1%E5%8C%96"><span class="toc-number">1.8.3.0.1.2.</span> <span class="toc-text">代码抽象化</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%94%A8-1"><span class="toc-number">1.8.3.0.1.3.</span> <span class="toc-text">代码复用</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.8.3.0.1.4.</span> <span class="toc-text">模块化设计</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%B4%A7%E8%80%A6%E5%90%88-amp-%E6%9D%BE%E8%80%A6%E5%90%88"><span class="toc-number">1.8.3.0.1.5.</span> <span class="toc-text">紧耦合&amp;松耦合</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%92%E5%BD%92"><span class="toc-number">1.8.3.0.2.</span> <span class="toc-text">递归</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.8.3.0.2.1.</span> <span class="toc-text">递归的定义</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E5%85%B3%E9%94%AE%E7%89%B9%E5%BE%81"><span class="toc-number">1.8.3.0.2.2.</span> <span class="toc-text">两个关键特征</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.8.3.0.2.3.</span> <span class="toc-text">递归的实现</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E7%AE%80%E5%8D%95%E5%B0%8F%E4%BE%8B%E5%AD%90"><span class="toc-number">1.8.3.0.2.4.</span> <span class="toc-text">递归简单小例子</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%974%EF%BC%9APyInstaller%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.8.4.</span> <span class="toc-text">模块4：PyInstaller库的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#Pyinstaller%E5%BA%93%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-number">1.8.4.0.0.1.</span> <span class="toc-text">Pyinstaller库的安装</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Pyinstaller%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.8.4.0.0.2.</span> <span class="toc-text">Pyinstaller库的使用</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Pyinstaller%E5%BA%93%E7%9A%84%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-number">1.8.4.0.0.3.</span> <span class="toc-text">Pyinstaller库的常用参数</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B8%EF%BC%9A%E7%A7%91%E8%B5%AB%E9%9B%AA%E8%8A%B1%E5%B0%8F%E5%8C%85%E8%A3%B9"><span class="toc-number">1.8.5.</span> <span class="toc-text">实例8：科赫雪花小包裹</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95"><span class="toc-number">1.8.5.0.0.1.</span> <span class="toc-text">单元测试</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.9.</span> <span class="toc-text">组合数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B%E5%8F%8A%E6%93%8D%E4%BD%9C"><span class="toc-number">1.9.1.</span> <span class="toc-text">集合类型及操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89"><span class="toc-number">1.9.1.0.1.</span> <span class="toc-text">集合类型定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-number">1.9.1.0.2.</span> <span class="toc-text">集合操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%85%AD%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%AC%A6%EF%BC%8C%E5%9B%9B%E4%B8%AA%E8%BF%90%E7%AE%97%E6%93%8D%E4%BD%9C%E7%AC%A6%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%B8%A4%E4%B8%AA%E5%85%B3%E7%B3%BB%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-number">1.9.1.0.2.1.</span> <span class="toc-text">六个操作符，四个运算操作符，以及两个关系操作符</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%9B%9B%E4%B8%AA%E5%A2%9E%E5%BC%BA%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-number">1.9.1.0.2.2.</span> <span class="toc-text">四个增强操作符</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="toc-number">1.9.1.0.3.</span> <span class="toc-text">集合处理方法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0%E6%88%96%E6%96%B9%E6%B3%95"><span class="toc-number">1.9.1.0.3.1.</span> <span class="toc-text">操作函数或方法</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.9.1.0.4.</span> <span class="toc-text">集合类型应用场景</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E7%B1%BB%E5%9E%8B%E5%8F%8A%E6%93%8D%E4%BD%9C"><span class="toc-number">1.9.2.</span> <span class="toc-text">序列类型及操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.9.2.1.</span> <span class="toc-text">元组类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.9.2.2.</span> <span class="toc-text">列表类型</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89"><span class="toc-number">1.9.2.2.0.1.</span> <span class="toc-text">序列类型定义</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0%E5%8F%8A%E6%96%B9%E6%B3%95"><span class="toc-number">1.9.2.2.0.2.</span> <span class="toc-text">序列处理函数及方法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E7%B1%BB%E5%9E%8B%E5%8F%8A%E6%93%8D%E4%BD%9C"><span class="toc-number">1.9.2.2.0.3.</span> <span class="toc-text">元组类型及操作</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E7%B1%BB%E5%9E%8B%E5%8F%8A%E6%93%8D%E4%BD%9C"><span class="toc-number">1.9.2.2.0.4.</span> <span class="toc-text">列表类型及操作</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%B1%BB%E5%9E%8B%E5%8F%8A%E6%93%8D%E4%BD%9C"><span class="toc-number">1.9.3.</span> <span class="toc-text">字典类型及操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%90%86%E8%A7%A3%E6%98%A0%E5%B0%84"><span class="toc-number">1.9.3.1.</span> <span class="toc-text">理解映射</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89"><span class="toc-number">1.9.3.1.1.</span> <span class="toc-text">字典类型定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0%E5%8F%8A%E6%96%B9%E6%B3%95"><span class="toc-number">1.9.3.1.2.</span> <span class="toc-text">字典处理函数及方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%B1%BB%E5%9E%8B%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.9.3.1.3.</span> <span class="toc-text">字典类型应用场景</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%975%EF%BC%9Ajieba%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.9.4.</span> <span class="toc-text">模块5：jieba库的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#jieba%E5%BA%93%E6%A6%82%E8%BF%B0"><span class="toc-number">1.9.4.0.0.1.</span> <span class="toc-text">jieba库概述</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#jieba%E5%88%86%E8%AF%8D%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">1.9.4.0.0.2.</span> <span class="toc-text">jieba分词的原理</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#jieba%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.9.4.0.0.3.</span> <span class="toc-text">jieba库的使用</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#jieba%E5%88%86%E8%AF%8D%E7%9A%84%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.9.4.0.0.4.</span> <span class="toc-text">jieba分词的三种模式</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#jieba%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.9.4.0.0.5.</span> <span class="toc-text">jieba库常用函数</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B10%EF%BC%9A%E6%96%87%E6%9C%AC%E8%AF%8D%E9%A2%91%E7%BB%9F%E8%AE%A1"><span class="toc-number">1.9.5.</span> <span class="toc-text">实例10：文本词频统计</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%93%88%E5%A7%86%E9%9B%B7%E7%89%B9-HAMLET-%E7%BB%9F%E8%AE%A1"><span class="toc-number">1.9.5.0.1.</span> <span class="toc-text">哈姆雷特(HAMLET)统计</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="Search" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1639038973242"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+</body>
+
+</html>
